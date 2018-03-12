@@ -10,7 +10,7 @@ gulp.task('default', () => {
     },
     ignore: ['./node_modules/**']
   })
-  .on('restart',() => {
+  .on('restart', () => {
     console.log('Restarting with gulp')
   });
 });

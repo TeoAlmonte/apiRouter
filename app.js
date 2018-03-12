@@ -1,17 +1,12 @@
-const express = require('express');
+const express = require('express')
+
+const indexRouter = require('./routes/index')
+const apiRouter = require('./routes/api')
+
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('welcome to API test');
-})
-
-const apiRouter = express.Router();
-
-apiRouter.route('/api')
-  .get((req, res) => {
-    console.log('herllo')
-  })
-
+app.use('/', indexRouter);
+app.use('/api', apiRouter);
 
 const port = process.env.PORT || 8000
 app.listen(port, () => {
