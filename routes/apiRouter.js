@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+require('../models/sandModel')
+
 const mongoose = require('mongoose');
 const Sand = mongoose.model('sands');
 const db = mongoose.connect('mongodb://localhost/sand');
@@ -12,7 +14,6 @@ router.route('/')
         console.log(err)
       } else
         res.json(sands)
-        console.log(sands)
     })
   })
 

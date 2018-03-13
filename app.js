@@ -1,7 +1,4 @@
 const express = require('express')
-const mongoose = require('mongoose');
-
-require('./models/sandModel')
 
 const indexRouter = require('./routes/indexRouter')
 const apiRouter = require('./routes/apiRouter')
