@@ -6,8 +6,10 @@ const SandSchema = new Schema({
   title: {
     type: String,
     required: true
-  }
+  },
+  age: {type: String},
+  gang: {type: String}
 });
 
 // Export Schema
-mongoose.model('sands', SandSchema)
+mongoose.model('sands', SandSchema);
