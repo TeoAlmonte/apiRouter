@@ -1,3 +1,3 @@
-exports.index_home = (req, res) => {
+exports.get = (req, res) => {
   res.send('working');
 };
