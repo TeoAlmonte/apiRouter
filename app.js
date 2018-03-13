@@ -1,7 +1,10 @@
 const express = require('express')
+const mongoose = require('mongoose');
 
-const indexRouter = require('./routes/index')
-const apiRouter = require('./routes/api')
+require('./models/sandModel')
+
+const indexRouter = require('./routes/indexRouter')
+const apiRouter = require('./routes/apiRouter')
 
 const app = express();
 

@@ -1,17 +1,18 @@
 const express = require('express');
 const router = express.Router();
+
 const mongoose = require('mongoose');
-const db = mongoose.connect('mongodb://localhost/sandAPI');
-const sand = require('../models/apiModel.js');
+const Sand = mongoose.model('sands');
+const db = mongoose.connect('mongodb://localhost/sand');
 
 router.route('/')
   .get((req, res) => {
-    sand.find(function(err, sand){
+    Sand.find((err, sands) => {
       if(err) {
         console.log(err)
       } else
-        res.json(sand)
-        console.log(res)
+        res.json(sands)
+        console.log(sands)
     })
   })
 
